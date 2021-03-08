@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Track = (props) => {
   const { track } = props;
+  console.log(track);
   return (
     <div className="col-md-6">
       <div className="card mb-4 shadow-sm">
@@ -20,8 +21,9 @@ const Track = (props) => {
             </strong>
             :{track.album_name}
           </p>
+
           <Link
-            to={`lyrics/track/${track.track_id}`}
+            to={`lyrics/track/${track.track_id}/${track.commontrack_id}/${track.artist_id}`}
             className="btn btn-dark btn-block"
           >
             <i className="fas fa-chevron-right"></i> View Lyrics
