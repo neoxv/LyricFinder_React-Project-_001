@@ -18,7 +18,7 @@ class Search extends Component {
 
     axios
       .get(
-        `/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
+        `/api/track.search?q_track=${this.state.trackTitle}&page_size=10&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then((res) => {
         // this.setState({ track_list: res.data.message.body.track_list });

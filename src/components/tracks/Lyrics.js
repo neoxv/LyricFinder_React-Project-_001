@@ -13,13 +13,13 @@ class Lyrics extends Component {
   componentDidMount() {
     // console.log(this.props.match.params.artist_id);
     const track_request = axios.get(
-      `/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
+      `/api/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MM_KEY}`
     );
     const lyrics_request = axios.get(
-      `/track.get?commontrack_id=${this.props.match.params.commontrackId}&apikey=${process.env.REACT_APP_MM_KEY}`
+      `/api/track.get?commontrack_id=${this.props.match.params.commontrackId}&apikey=${process.env.REACT_APP_MM_KEY}`
     );
     const album_request = axios.get(
-      `/artist.albums.get?artist_id=${this.props.match.params.artist_id}&apikey=${process.env.REACT_APP_MM_KEY}`
+      `/api/artist.albums.get?artist_id=${this.props.match.params.artist_id}&apikey=${process.env.REACT_APP_MM_KEY}`
     );
 
     axios
